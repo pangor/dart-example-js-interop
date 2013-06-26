@@ -9,3 +9,11 @@ Hug.prototype.embrace = function(length) {
 Hug.prototype.patBack = function(onDone) {
   onDone('All done.');
 }
+
+function HugDatabase() {
+  this.hugs = [];
+}
+
+HugDatabase.prototype.addHug = function(hug) {
+  this.hugs.push(hug);
+}

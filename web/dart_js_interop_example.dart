@@ -11,6 +11,12 @@ void main() {
   // Get a proxy to the JS object.
   var hug = new js.Proxy(context['Hug']);
   
+  var hugDatabase = new js.Proxy(context['HugDatabase']);
+  
+  hugDatabase['addHug'](hug);
+  
+  print(hugDatabase['hugs']['length']);
+  
   // Call the embrace method and pass in 10.
   var result = hug['embrace'](10);
   
